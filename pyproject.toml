@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ofmphy"
+version = "0.8.0"
+description = "Baseband PHY simulation of an 800G-class coherent optical fibre modem (DP-16QAM, OpenROADM oFEC)"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Hossein Khoshnevis" }]
+requires-python = ">=3.9"
+dependencies = ["numpy>=1.22"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering",
+    "Intended Audience :: Telecommunications Industry",
+]
+
+[project.optional-dependencies]
+plot = ["matplotlib>=3.5"]
+dev = ["pytest", "matplotlib>=3.5"]
+
+[tool.setuptools.packages.find]
+include = ["ofmphy*"]
